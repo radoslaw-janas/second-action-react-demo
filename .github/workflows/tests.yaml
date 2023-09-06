@@ -1,0 +1,14 @@
+name: Run tests of the code on github servers
+on: push
+jobs:
+  tests_run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get-code
+        uses: actions/checkout@v4
+      - name: install dependencies
+        run: npm ci 
+      - name: run tests
+        run: npm test
+
+
