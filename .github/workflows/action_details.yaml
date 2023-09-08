@@ -1,0 +1,10 @@
+name: get action context
+on: workflow_dispatch
+jobs:
+  get_info:
+    runs-on: ubuntu-latest
+    steps:
+      - name: get github context data
+        run: echo "${{toJSON(github)}}"
+
+
